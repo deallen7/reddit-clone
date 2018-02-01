@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#add voting function to links
+gem 'acts_as_votable', '~> 0.11.1'
+
 #Add user authentication with Devise gem
 gem 'devise', '~> 4.4', '>= 4.4.1'
 
