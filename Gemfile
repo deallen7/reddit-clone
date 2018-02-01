@@ -8,6 +8,9 @@ end
 #Add user authentication with Devise gem
 gem 'devise', '~> 4.4', '>= 4.4.1'
 
+#add bootstrap sass
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
