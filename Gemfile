@@ -5,6 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#so that we can use the 'div_for' method
+gem 'record_tag_helper', '~> 1.0'
+
+#add simple form
+gem 'simple_form'
+
 #add voting function to links
 gem 'acts_as_votable', '~> 0.11.1'
 

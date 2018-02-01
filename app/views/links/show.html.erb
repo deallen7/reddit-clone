@@ -12,7 +12,7 @@
 		<%= link_to 'Destroy', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
 	</div>
 <% end %>
-
+ 
 <div class="btn-group pull-right">
 	<%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
 		<span class="glyphicon glyphicon-chevron-up"></span>
@@ -25,3 +25,19 @@
 		<%= @link.get_downvotes.size %>
 	<% end %>
 </div>
+
+<h3 class="comments_title">
+	<%= @link.comments.count %> comments
+</h3>
+
+<div id="comments">
+	<%= render :partial => @link.comments %>
+</div>
+<%= simple_form_for [@link, Comment.new] do |f| %>
+	<div class="field">
+		<%= f.text_area :body, class: "form-control" %>
+	</div>
+	<br>
+	<%= f.submit "Add Comment", class: "btn btn-primary" %>
+<% end %>
+
